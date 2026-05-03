@@ -1,0 +1,94 @@
+CREATE TABLE CUSTOMER (
+cust_id varchar(10) PRIMARY KEY NOT NULL,
+cust_name varchar(20) NOT NULL,
+cust_surname varchar(20) NOT NULL,
+cust_locality varchar(25), (not null)
+cust_street varchar(20),
+cust_house_no varchar(3),
+cust_postcode varchar(8),
+cust_mob varchar(12),
+cust_email varchar(35) 
+);
+
+
+
+CREATE TABLE PRODUCT (
+prod_id varchar(10) PRIMARY KEY NOT NULL,
+supplier_id varchar(10),
+FOREIGN KEY (supplier_id) references suppliers(supplier_id),
+prod_name varchar(25),
+prod_colour varchar(15),
+prod_size varchar(3),
+prod_qty int,
+prod_sprice double
+);
+
+
+
+CREATE TABLE sales(
+sale_id int,
+sale_date Date,
+cust_id varchar(10),
+FOREIGN KEY (cust_id) references customer(cust_id),
+prod_id varchar(10),
+FOREIGN KEY (prod_id) references product(prod_id),
+sale_qty int,
+CONSTRAINT chk_sale
+PRIMARY KEY(sale_id,prod_id)
+);
+ 
+
+
+
+
+CREATE TABLE SUPPLIERS (
+supplier_id(10) PRIMARY KEY NOT NULL,
+supplier_name(30),
+supplier_country(15),
+supplier_email(30),
+supplier_contact_no int
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+download python connecter to connect database
+
+to connect python with database
+
+username_query = "SELECT * FROM users WHERE user_name = %s"
+saveuser_query = "INSERT * INTO users(user_name,user_password) VALUES(%s , %s)"
+login_query = "SELECT * FROM users WHERE user_name = %s AND user_password = %s"
+
+					IMPORTANT IMPORTANT IMPORTANT
+
+mydb = mysql.connector.connect(
+	host = "localhost",
+	user = "root",					# creates the link with the database
+	password = "",
+	database = "add_user_login"
+
+my_cursor = mydb.cursor()    			#object link to sql the database that will need to pass
+
+
+my_cursor.execute(username_query,(user))               #will execute the sql statement
+recrdset = mycursor.fetchall()                         #will return all the records 
+
+
+
+
+17/12/2024
+
+pip install pandas
+pip install fpdf
