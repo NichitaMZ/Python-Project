@@ -8,6 +8,7 @@ This project is a command-line based customer and sales management system develo
 - Manage product and supplier information
 - Record and track sales
 - Generate reports (PDF/Excel)
+- Improved security using .env and .gitignore
 
 ## Technologies Used
 - Python
