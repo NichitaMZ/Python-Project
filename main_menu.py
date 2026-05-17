@@ -12,25 +12,25 @@ import subprocess
 
 
 def open_customer():
-    subprocess.Popen(["python","Customer Table.py"])
+    subprocess.Popen(["python","customer_table.py"])
 
 
 def open_product():
-    subprocess.Popen(["python","Product Table.py"])
+    subprocess.Popen(["python","product_table.py"])
 
 
 def open_sales():
-    subprocess.Popen(["python","Sale Table.py"])
+    subprocess.Popen(["python","sale_table.py"])
 
 
 def open_suppliers():
-    subprocess.Popen(["python","Suppliers Table.py"])
+    subprocess.Popen(["python","suppliers_table.py"])
 
 def open_cust_reports():
     subprocess.Popen(["python","CustomerReportexcel.py"])
 
 def open_sales_reports():
-    subprocess.Popen(["python","Report Sale.py"])
+    subprocess.Popen(["python","report_sale.py"])
 
 root = tk.Tk()
 root.title("SPORTMD MAIN MENU")
